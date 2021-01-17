@@ -1,0 +1,48 @@
+.home{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    'warpper'
+    'tabBar';
+    grid-template-rows: 1fr 55px;
+    .animation{
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .warpper{
+        grid-area: warpper;
+        color: #ddd;
+        overflow: hidden;
+        background: rgba(0, 0, 0, .5);
+        .content{
+            padding: 10px;
+            min-height: calc(100% + .5Px);
+        }
+    }
+    .tabBar{
+        grid-area: tabBar;
+        display: flex;
+        >div{
+            flex: 1;
+            overflow: hidden;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background: rgba(0, 0, 0, .1);
+            }
+            span{
+                font-size: 14px;
+                color: #999;
+            }
+        }
+    }
+}
